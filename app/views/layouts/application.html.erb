@@ -8,7 +8,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
+    <%= link_to "All Dogs", dogs_path %>
+    <%= link_to "All Employees", employees_path %>
+    <%= link_to "Dogs up for adoption", dogs_up_for_adoption_path %>
+
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,12 @@
+<h1> Adopt <%=@dog.name%> </h1>
+
+<%= form_tag(adopt_path, method: 'post') do %>
+
+<%= hidden_field_tag(:dog_id, @dog.id) %>
+
+<%= label_tag(:new_employee_id,  'Select an Employee') %>
+<%= select_tag(:new_employee_id, options_from_collection_for_select(Employee.all, :id, :first_name)) %> <br/>
+
+<%= submit_tag %> <br/>
+
+<%end%>
